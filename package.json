@@ -1,0 +1,1 @@
+{"name":"shield-fitness","private":true,"type":"module","scripts":{"test":"node tests/scheduler.test.js && node tests/progression.test.js"}}

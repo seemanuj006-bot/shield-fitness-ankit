@@ -1,0 +1,40 @@
+/* Palette sampled from the logo: ember orange (#D84A2A) + silver/steel. Hues used: ~12 (orange), ~205 (steel), ~150 (green), ~40 (amber). Nothing in 250-330. */
+:root {
+  color-scheme: light;
+  --bg: #E9EEF2; --bg2: #DCE4EB; --surface-solid: #FFFFFF;
+  --glass-a: rgba(255,255,255,.70); --glass-b: rgba(255,255,255,.46); --glass-line: rgba(255,255,255,.80); --glass-hi: rgba(255,255,255,.95);
+  --line: #C6D1DB; --text: #14212D; --text-2: #475766;
+  --primary: #C23A18; --on-primary: #FFFFFF; --primary-press: #A93113; --primary-text: #B03315; --primary-soft: rgba(194,58,24,.12);
+  --steel: #2F5F82; --steel-soft: rgba(47,95,130,.12);
+  --ok: #1E7A4F; --ok-soft: rgba(30,122,79,.14); --warn: #7F5200; --warn-soft: rgba(196,128,0,.18); --err: #B3261E; --err-soft: rgba(179,38,30,.12);
+  --focus: #2F5F82; --scrim: rgba(20,33,45,.45);
+  --shadow: 0 1px 2px rgba(20,33,45,.10);
+  --r: 16px; --r-sm: 10px;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px;
+  --fs-s: .8125rem; --fs: 1rem; --fs-m: 1.125rem; --fs-l: 1.375rem; --fs-xl: 1.75rem;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111C28; --bg2: #0E1822; --surface-solid: #1A2A3A;
+  --glass-a: rgba(38,57,76,.74); --glass-b: rgba(28,43,58,.62); --glass-line: rgba(150,182,208,.24); --glass-hi: rgba(190,216,236,.20);
+  --line: #2B3F52; --text: #E7EDF2; --text-2: #A3B3C1;
+  --primary: #F0663F; --on-primary: #111C28; --primary-press: #DC5430; --primary-text: #FF8F6C; --primary-soft: rgba(240,102,63,.18);
+  --steel: #86B8DB; --steel-soft: rgba(134,184,219,.16);
+  --ok: #5CC890; --ok-soft: rgba(92,200,144,.16); --warn: #E6B450; --warn-soft: rgba(230,180,80,.16); --err: #FF8D84; --err-soft: rgba(255,141,132,.16);
+  --focus: #86B8DB; --scrim: rgba(6,12,18,.6);
+  --shadow: 0 1px 2px rgba(6,12,18,.35);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    color-scheme: dark;
+    --bg: #111C28; --bg2: #0E1822; --surface-solid: #1A2A3A;
+    --glass-a: rgba(38,57,76,.74); --glass-b: rgba(28,43,58,.62); --glass-line: rgba(150,182,208,.24); --glass-hi: rgba(190,216,236,.20);
+    --line: #2B3F52; --text: #E7EDF2; --text-2: #A3B3C1;
+    --primary: #F0663F; --on-primary: #111C28; --primary-press: #DC5430; --primary-text: #FF8F6C; --primary-soft: rgba(240,102,63,.18);
+    --steel: #86B8DB; --steel-soft: rgba(134,184,219,.16);
+    --ok: #5CC890; --ok-soft: rgba(92,200,144,.16); --warn: #E6B450; --warn-soft: rgba(230,180,80,.16); --err: #FF8D84; --err-soft: rgba(255,141,132,.16);
+    --focus: #86B8DB; --scrim: rgba(6,12,18,.6);
+    --shadow: 0 1px 2px rgba(6,12,18,.35);
+  }
+}

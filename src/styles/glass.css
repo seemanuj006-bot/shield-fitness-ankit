@@ -1,0 +1,19 @@
+/* Glass look = cheap CSS (translucent fill + hairline border + inner highlight). backdrop-filter is used on at most 2 static surfaces: top bar + bottom nav (runner: top bar + bottom bar). */
+.card, .topbar, .nav, .banner, .dock, .runner-bar {
+  background: linear-gradient(180deg, var(--glass-a), var(--glass-b));
+  border: 1px solid var(--glass-line);
+  box-shadow: inset 0 1px 0 var(--glass-hi), var(--shadow);
+}
+.card { border-radius: var(--r); padding: var(--s4); min-width: 0; }
+.card.flat { background: var(--surface-solid); box-shadow: var(--shadow); border-color: var(--line); }
+.topbar, .nav, .runner-bar { background: linear-gradient(180deg, var(--glass-a), var(--glass-a)); }
+.topbar { border-width: 0 0 1px 0; border-radius: 0; box-shadow: inset 0 -1px 0 var(--glass-hi); }
+.nav { border-width: 1px 0 0 0; border-radius: 18px 18px 0 0; }
+.runner-bar { border-radius: 0; }
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .topbar, .nav, .runner-bar { -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2); background: linear-gradient(180deg, var(--glass-a), var(--glass-b)); }
+}
+html[data-saver="1"] .topbar, html[data-saver="1"] .nav, html[data-saver="1"] .runner-bar {
+  -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--surface-solid);
+}
+html[data-saver="1"] .card, html[data-saver="1"] .banner, html[data-saver="1"] .dock { background: var(--surface-solid); box-shadow: none; border-color: var(--line); }
